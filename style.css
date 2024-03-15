@@ -1,0 +1,28 @@
+/* * {
+  margin: 0;
+  padding: 0;
+}
+
+.expense-heading {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+input {
+  max-width: 300px;
+}
+select {
+  max-width: 300px;
+}
+button {
+  max-width: 250px;
+}
+label {
+  display: inline-block;
+} */

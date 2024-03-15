@@ -1,0 +1,45 @@
+# Ignore vendor directory created by Composer
+# /vendor/
+
+# Ignore any files or directories created by PHPStorm
+.idea/
+
+# Ignore log files
+*.log
+
+# Ignore session files
+/session/
+
+# Ignore composer.lock file (if using Composer)
+composer.lock
+
+# Ignore any environment-specific files
+.env
+
+# Ignore any build or compiled files
+/build/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
