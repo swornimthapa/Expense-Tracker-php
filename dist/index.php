@@ -1,6 +1,9 @@
 <?php 
         require "./connect.php";
-
+        // if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['editButton'])){
+        //     $sql = "select expenses.id, expenses.title, expenses.amount, expenses_date from expenses where id={$_POST['editButton']}";
+        //     $result = mysqli_query($conn,$sql);
+        // }
        
 
        
@@ -76,7 +79,7 @@
                            echo "<td>{$row['amount']}</td>";
                            echo "<td>{$row['expenses_date']}</td>";
                            echo " <td>{$row['label']}</td>";
-                           echo "<td class='text-green-500'><form action='' method='POST'><button type='submit' value='{$row['id']}' name='editButton'><i class='fa-solid fa-pen-to-square hover:cursor-pointer'></i></button></form></td>";
+                           echo "<td class='text-green-500'><form action='./' method='POST'><button type='submit' value='{$row['id']}' name='editButton'><i class='fa-solid fa-pen-to-square hover:cursor-pointer'></i></button></form></td>";
                            echo "<td class='text-red-500'><form action='deleteExpense.php' method='POST'><button type='submit' value='{$row['id']}' name='deleteButton'><i class='fa-solid fa-trash hover:cursor-pointer'></i></button></form></td>";
                       
                             echo '</tr>';
@@ -96,6 +99,7 @@
         <label class="mr-2" for="">Entry type :</label>
         <select class="grow border-[1px] border-black outline-1 outline-emerald-300" name="selectoption" id="">
             <?php
+    
             $sql = "select id , label from categories";
             $result = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($result) > 0) {
